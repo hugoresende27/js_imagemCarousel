@@ -29,14 +29,58 @@ body
     font-family: 'Mulish',sans-serif;
     color: #fff;
     display: flex;          /*coloca tudo em linha*/
-    flex-direction: column; /*coloca tudo em coluna*/
+    /*flex-direction: column; /*coloca tudo em coluna*/
     align-items: center;    /*alinha horizontalmente*/
     justify-content: center;/*alinha tudo verticalmente com uso de height:100vh*/
     height: 100vh;
-     overflow: hidden; /*BARRA DE SCROLL DOWN, HIDDEN ESCONDIDA*/
+     /*overflow: hidden; /*BARRA DE SCROLL DOWN, HIDDEN ESCONDIDA*/
      margin: 0;
      /*overflow-x: hidden; /*REMOVER BARRA DE SCROLL HORIZONTAL*/
 }
+
+
+img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.btnMain{
+    display: flex;
+    justify-content: space-between;/*COLOCA CADA BOTÃO EM CADA LADO, ESQUERDA E DIREITA*/
+}
+
+.btn {
+    background-color: var(--gold-cor);
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 49.5%;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+
+.carrosel {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    height: 530px;
+    width: 500px;
+    overflow: hidden;
+}
+
+.imagem-main {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
 
 /*///////////////MEDIA QUERYS////////////////////////////////////////////////////////////////////*/
 
