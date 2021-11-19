@@ -22,5 +22,21 @@ function mudaImagem() {
         index = img.length -1//index é o fim
     }
 
-    imagens.style.transform = `translateX(${-index * 500}px)`//move a imagem 500px
+    imagens.style.transform = `translateX(${-index * 500}px)`//move a imagem 500px translateX
 }
+
+function resetInterval(){
+    clearInterval(intervalo)
+    intervalo = setInterval(run,2000)
+}
+
+leftBtn.addEventListener('click', () => {
+    index--
+    mudaImagem()
+    resetInterval()
+})
+rightBtn.addEventListener('click', () => {
+    index++
+    mudaImagem()
+    resetInterval()
+})
